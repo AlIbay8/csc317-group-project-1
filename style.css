@@ -1,0 +1,19 @@
+body{
+    
+}
+.list-inline {
+    display:flex;
+    list-style-type:none;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+    
+}
+.list-inline > li:nth-child(2) {
+    margin-left: auto;
+}
+.sticky-navbar {
+    margin: 10px;
+}
