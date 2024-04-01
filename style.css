@@ -21,13 +21,22 @@ body{
     position: sticky;
     background-color: lightblue;
 }
-.hero {
+.hero-img {
     width: 100%;
     height: auto;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .profile {
     text-align: center;
 
+}
+.profile > img {
+    border-radius: 100%;
 }
 .hero-container {
     text-align: center;
