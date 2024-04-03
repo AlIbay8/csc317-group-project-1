@@ -1,6 +1,7 @@
-body{
-    
+body {
+    margin: 0px;
 }
+
 .list-inline {
     display:flex;
     list-style-type:none;
@@ -9,11 +10,119 @@ body{
     width: 100%;
     margin: 0px;
     padding: 0;
-    
 }
+
 .list-inline > li:nth-child(2) {
     margin-left: auto;
 }
+
 .sticky-navbar {
-    margin: 10px;
+    padding: 10px;
+    top: 0;
+    position:-webkit-sticky;
+    position: sticky;
+    background-color: lightblue;
+}
+
+.list-inline > li:nth-child(2) > .nav-btn {
+    margin-left: auto;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.list-inline > li:last-child > .nav-btn {
+    margin-left: auto;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.nav-btn {
+    border: none;
+    /*padding: 1rem 3rem;*/
+    width: 6rem;
+    height: 3rem;
+}
+
+/*@keyframes default {
+    to {font-size: 1rem;}
+}*/
+
+@keyframes hover-expand {
+    from {font-size: 1rem;}
+    to {font-size: 1.5rem;}
+}
+
+@keyframes select-shrink {
+    from {font-size: 1.35rem;}
+    to {font-size: 1.2rem;}
+}
+
+.nav-btn:hover {
+    font-size: 1.5rem;
+    animation: hover-expand;
+    animation-duration: 250ms;
+}
+.nav-btn:active {
+    font-size: 1.2rem;
+    animation: select-shrink;
+    animation: 100ms;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+.hero-text {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0px 0px #72d7fe, 0px 0px 6px #72d7fe, 0px 0px 4px #72d7fe, 0px 0px 8px #72d7fe, 0px 0px 10px #72d7fe, 0px 0px 20px #72d7fe, 0px 0px 60px #72d7fe;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-container {
+    text-align: center;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile > img {
+    max-width: 25%;
+    border-radius: 100%;
+}
+
+.about {
+    display: block;
+    width: 60%;
+    margin: 0px auto;
+    text-align: center;
+    min-width: 500px;
+    max-width: 800px;
+}
+
+.fact-container {
+    display: block;
+    width: 50%;
+    min-width: 500px;
+    margin: 0px auto;
+}
+
+.fact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fact > .fact-text {
+    width: 60%;
+    margin: 0px 1rem;
+}
+
+.fact:nth-child(even) {
+    flex-direction: row-reverse;
 }
