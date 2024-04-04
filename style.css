@@ -22,6 +22,7 @@ body {
     position:-webkit-sticky;
     position: sticky;
     background-color: lightblue;
+    z-index: 99;
 }
 
 .list-inline > li:nth-child(2) > .nav-btn {
@@ -79,48 +80,112 @@ body {
     color: white;
     text-shadow: 0px 0px #72d7fe, 0px 0px 6px #72d7fe, 0px 0px 4px #72d7fe, 0px 0px 8px #72d7fe, 0px 0px 10px #72d7fe, 0px 0px 20px #72d7fe, 0px 0px 60px #72d7fe;
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .hero-container {
+    background-image: url("./resources/hero.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
     text-align: center;
+    width: 100%;
+    height: 100vh;
 }
 
-.profile {
-    text-align: center;
-}
-
-.profile > img {
-    max-width: 25%;
+.about > img {
+    max-width: 55%;
     border-radius: 100%;
 }
 
 .about {
     display: block;
-    width: 60%;
-    margin: 0px auto;
+    width: 70%;
+    margin: 3rem auto;
     text-align: center;
     min-width: 500px;
-    max-width: 800px;
+    max-width: 1000px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+.albums {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.album-marquee {
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    height: 20rem;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.marquee-content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    min-width: 100%;
+    gap: var(--gap);
+    animation: scroll 100s linear infinite;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.marquee-content > li > img {
+    height: 100%;
+    width: auto;
+}
+
+.demo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sc-embed {
+    width: 40%;
 }
 
 .fact-container {
-    display: block;
-    width: 50%;
-    min-width: 500px;
-    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
 }
 
 .fact {
     display: flex;
     justify-content: space-between;
+    width: 40%;
+    min-width: 600px;
 }
 
 .fact > .fact-text {
     width: 60%;
     margin: 0px 1rem;
+}
+
+.fact > img {
+    height: 300px;
+    width: auto;
 }
 
 .fact:nth-child(even) {
