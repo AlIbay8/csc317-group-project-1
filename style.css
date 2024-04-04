@@ -88,7 +88,7 @@ body {
 }
 
 .hero-container {
-    background-image: url("https://media1.tenor.com/m/A_XTxNeLkrgAAAAd/fries-french-fries.gif");
+    background-image: url("./resources/hero.jpg");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
