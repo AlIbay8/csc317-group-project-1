@@ -3,6 +3,15 @@ body {
     font-size: 1.2rem;
 }
 
+.sticky-navbar {
+    padding: 10px;
+    top: 0;
+    position:-webkit-sticky;
+    position: sticky;
+    background-color: lightblue;
+    z-index: 99;
+}
+
 .list-inline {
     display:flex;
     list-style-type:none;
@@ -17,23 +26,12 @@ body {
     margin-left: auto;
 }
 
-.sticky-navbar {
-    padding: 10px;
-    top: 0;
-    position:-webkit-sticky;
-    position: sticky;
-    background-color: lightblue;
-    z-index: 99;
-}
-
 .list-inline > li:nth-child(2) > .nav-btn {
-    margin-left: auto;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
 
 .list-inline > li:last-child > .nav-btn {
-    margin-left: auto;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
@@ -140,6 +138,7 @@ body {
     -webkit-filter: blur(8px);
 } */
 
+/* CSS Marquee reference: https://ryanmulligan.dev/blog/css-marquee/ */
 .album-marquee {
     --gap: 1rem;
     display: flex;
@@ -206,6 +205,7 @@ body {
 .fact > img {
     height: 300px;
     width: auto;
+    border-radius: 1rem;
 }
 
 .fact:nth-child(even) {
@@ -239,11 +239,19 @@ footer {
 footer a {
     color: #42c2f5;
 }
-
 footer a:hover {
     color: orange;
 }
-
 footer a:visited {
     color: #b642f5;
+}
+
+input:default {
+    color:white;
+}
+input:focus {
+    background-color: lightcyan;
+}
+.submit-btn {
+    border-radius: 1rem;
 }
