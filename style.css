@@ -1,6 +1,8 @@
 body {
     margin: 0px;
     font-size: 1.2rem;
+    font-family: "Exo 2", sans-serif;
+    background-image: url("./resources/painted_plaster_wall_ao_1k.jpg");
 }
 
 .sticky-navbar {
@@ -177,6 +179,7 @@ body {
 
 .sc-embed {
     width: 40%;
+    min-width: 700px;
 }
 
 .fact-container {
@@ -191,9 +194,8 @@ body {
     display: flex;
     justify-content: space-between;
     width: 40%;
-    min-width: 600px;
+    min-width: 700px;
 }
-
 .fact > .fact-text {
     display: flex;
     flex-direction: column;
@@ -201,15 +203,22 @@ body {
     width: 60%;
     margin: 0px 1rem;
 }
-
 .fact > img {
     height: 300px;
     width: auto;
     border-radius: 1rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
-
 .fact:nth-child(even) {
     flex-direction: row-reverse;
+}
+
+.bg-end {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    display: block;
 }
 
 footer {
@@ -246,6 +255,9 @@ footer a:visited {
     color: #b642f5;
 }
 
+input {
+    width: 70%;
+}
 input:default {
     color:white;
 }
