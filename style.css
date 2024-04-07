@@ -1,6 +1,17 @@
 body {
     margin: 0px;
     font-size: 1.2rem;
+    font-family: "Exo 2", sans-serif;
+    background-image: url("./resources/painted_plaster_wall_ao_1k.jpg");
+}
+
+.sticky-navbar {
+    padding: 10px;
+    top: 0;
+    position:-webkit-sticky;
+    position: sticky;
+    background-color: lightblue;
+    z-index: 99;
 }
 
 .list-inline {
@@ -17,23 +28,12 @@ body {
     margin-left: auto;
 }
 
-.sticky-navbar {
-    padding: 10px;
-    top: 0;
-    position:-webkit-sticky;
-    position: sticky;
-    background-color: lightblue;
-    z-index: 99;
-}
-
 .list-inline > li:nth-child(2) > .nav-btn {
-    margin-left: auto;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
 
 .list-inline > li:last-child > .nav-btn {
-    margin-left: auto;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
@@ -122,9 +122,25 @@ body {
 
 .albums {
     text-align: center;
-    margin-bottom: 3rem;
+    /* padding: 3rem 0px; */
 }
 
+/* .album-bg {
+    z-index: -1;
+    width: 100%;
+    height: 93%;
+    position: absolute;
+    top: inherit;
+    left: 0;
+    background-image: url("./resources/felipe-synth.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+} */
+
+/* CSS Marquee reference: https://ryanmulligan.dev/blog/css-marquee/ */
 .album-marquee {
     --gap: 1rem;
     display: flex;
@@ -163,6 +179,7 @@ body {
 
 .sc-embed {
     width: 40%;
+    min-width: 700px;
 }
 
 .fact-container {
@@ -177,9 +194,8 @@ body {
     display: flex;
     justify-content: space-between;
     width: 40%;
-    min-width: 600px;
+    min-width: 700px;
 }
-
 .fact > .fact-text {
     display: flex;
     flex-direction: column;
@@ -187,12 +203,67 @@ body {
     width: 60%;
     margin: 0px 1rem;
 }
-
 .fact > img {
     height: 300px;
     width: auto;
+    border-radius: 1rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
-
 .fact:nth-child(even) {
     flex-direction: row-reverse;
+}
+
+.bg-end {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    display: block;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .contact > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+} */
+
+.email::marker {
+    content: "📧 ";
+}
+.insta::marker {
+    content: "📷 ";
+}
+.twitter::marker {
+    content: "🐦 ";
+}
+
+footer a {
+    color: #42c2f5;
+}
+footer a:hover {
+    color: orange;
+}
+footer a:visited {
+    color: #b642f5;
+}
+
+input {
+    width: 70%;
+}
+input:default {
+    color:white;
+}
+input:focus {
+    background-color: lightcyan;
+}
+.submit-btn {
+    border-radius: 1rem;
 }
